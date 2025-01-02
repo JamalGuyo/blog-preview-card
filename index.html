@@ -32,7 +32,40 @@
       }
 
       /*UTILITY*/
+      :root {
+        --spacer: 1rem;
+      }
+
+      .flow-content > * + * {
+        margin-top: var(--spacer, var(--flow-spacer));
+      }
+
+      .a-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .split {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
       /*GENERAL*/
+      body {
+        min-height: 100vh;
+      }
+
+      /*COMPONENTS*/
+      .card {
+        max-width: 25rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid black;
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -42,7 +75,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="a-center">
     <main>
       <div class="card">
         <img
@@ -59,7 +92,7 @@
           content, and presentation.
         </p>
 
-        <div>
+        <div class="split">
           <img src="assets/images/image-avatar.webp" alt="avatar" />
           Greg Hooper
         </div>
@@ -76,4 +109,3 @@
     </footer>
   </body>
 </html>
-
