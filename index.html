@@ -30,7 +30,8 @@
 
       body,
       h1,
-      p {
+      p,
+      figure {
         margin: 0;
       }
 
@@ -118,6 +119,10 @@
         border-radius: var(--radius);
       }
 
+      .card time {
+        display: block;
+      }
+
       .card h1 {
         cursor: pointer;
       }
@@ -143,14 +148,17 @@
   </head>
   <body class="a-center">
     <main>
-      <div class="card flow-content">
-        <img
-          src="assets/images/illustration-article.svg"
-          alt="illustration of an article"
-        />
+      <article class="card flow-content">
+        <figure>
+          <img
+            src="assets/images/illustration-article.svg"
+            alt="illustration of an article"
+          />
+        </figure>
         <p class="pill bg-yellow">Learning</p>
 
-        <p class="date">Published 21 Dec 2023</p>
+        <time class="date" datetime="2023-12-21">Published 21 Dec 2023</time>
+
         <h1>HTML & CSS foundations</h1>
 
         <p class="description">
@@ -158,15 +166,17 @@
           content, and presentation.
         </p>
 
-        <div class="author split">
-          <img
-            class="avatar"
-            src="assets/images/image-avatar.webp"
-            alt="avatar"
-          />
+        <footer class="author split">
+          <figure>
+            <img
+              class="avatar"
+              src="assets/images/image-avatar.webp"
+              alt="avatar"
+            />
+          </figure>
           <span> Greg Hooper </span>
-        </div>
-      </div>
+        </footer>
+      </article>
     </main>
 
     <footer>
