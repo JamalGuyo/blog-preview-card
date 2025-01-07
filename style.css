@@ -13,7 +13,13 @@ figure {
 }
 
 img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*UTILITY*/
